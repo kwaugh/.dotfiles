@@ -30,9 +30,4 @@ nmap L :tabn<CR>
 " Allow for absolute line number jumping by typing line number then enter
 :nnoremap <CR> G
 
-" Set block cursor for cygwin
-let &t_ti.="\e[1 q"
-let &t_SI.="\e[5 q"
-let &t_EI.="\e[1 q"
-let &t_te.="\e[0 q"
-imap jj <Esc>
+syntax on

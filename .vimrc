@@ -15,6 +15,12 @@ set cindent
 set relativenumber
 set number
 
+" Allow for mouse click to move cursor
+set mouse=a
+
+" Make all tabs align
+set shiftround
+
 " j and k treat wrapped lines as distinct lines when going up and down the page
 nmap j gj
 nmap k gk

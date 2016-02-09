@@ -38,8 +38,11 @@ nmap L :tabn<CR>
 
 syntax on
 
-" Cygwin stuff
-let &t_ti.="\e[1 q"
-let &t_SI.="\e[5 q"
-let &t_EI.="\e[1 q"
-let &t_te.="\e[0 q"
+" adjust configuration for such hostile environment as Windows {{{
+if has("win32") || has("win16")
+  let &t_ti.="\e[1 q"
+  let &t_SI.="\e[5 q"
+  let &t_EI.="\e[1 q"
+  let &t_te.="\e[0 q"
+endif
+" }}}

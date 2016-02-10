@@ -33,4 +33,6 @@ eval "$(thefuck --alias)"
 alias python2='python'
 alias digitalocean='ssh root@192.241.244.206'
 
+alias home='cd /cygdrive/c/Users/keivaun'
+
 set -o vi

@@ -10,6 +10,12 @@ set colorcolumn=80
 " Make it red
 highlight ColorColumn ctermbg=124
 
+" Set a new <leader> character
+let mapleader = ","
+let g:mapleader = ","
+
+" Fast saving
+nmap <leader>w :w!<cr>
 
 " Tab Settings
 set tabstop=4 " number of visual spaces a tab counts for
@@ -21,15 +27,15 @@ set expandtab " tabs are spaces
 set autoindent
 set cindent
 
-" Show line numbers
-set relativenumber " relative line numbers
-set number " display absolute line number of current line
-set cursorline " highlight the current line
-set wildmenu " visual autocomplete for command menu
-set showmatch " highlight matching [{()}]
-set incsearch " search as characters are entered
-set hlsearch " highlights search matches
-" remap highlight off to /<space>
+set relativenumber  " relative line numbers
+set number          " display absolute line number of current line
+set cursorline      " highlight the current line
+set wildmenu        " visual autocomplete for command menu
+set showmatch       " highlight matching [{()}]
+set incsearch       " search as characters are entered
+set hlsearch        " highlights search matches
+set ignorecase      " ignore case when searching
+set smartcase       " smart case searching
 nnoremap <leader>c :nohlsearch<CR>
 
 " Allow for mouse click to move cursor

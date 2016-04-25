@@ -5,14 +5,16 @@ execute pathogen#infect()
 filetype plugin indent on
 
 colorscheme badwolf
-
-set colorcolumn=80
-" Make it red
-highlight ColorColumn ctermbg=124
+syntax on
 
 " Set a new <leader> character
 let mapleader = ","
 let g:mapleader = ","
+
+augroup vimrc_autocmds
+    autocmd BufEnter * highlight OverLength ctermbg=red guibg=#592929
+    autocmd BufEnter * match OverLength /\%81v.*/
+augroup END
 
 " Fast saving
 nmap <leader>w :w!<cr>
@@ -62,7 +64,6 @@ nmap L :tabn<CR>
 " save session
 nnoremap <leader>s :mksession<CR>
 
-syntax on
 
 " adjust configuration for such hostile environment as Windows {{{
 if has("darwin")

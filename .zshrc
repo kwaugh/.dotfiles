@@ -19,6 +19,7 @@ PROMPT='%{$(pwd|grep --color=always /)%${#PWD}G%} %(!.%F{red}.%F{cyan})%n%f@%F{y
 unamestr=$(uname)
 
 alias ls='ls -G'
+alias ll='ls -l'
 alias peeps='ssh kwaugh@peeps.cs.utexas.edu'
 alias peepsy='ssh -Y kwaugh@peeps.cs.utexas.edu'
 alias pez='ssh kwaugh@pez.cs.utexas.edu'
@@ -38,3 +39,13 @@ alias digitalocean='ssh root@192.241.244.206'
 
 
 set -o vi
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
+encrypt() {
+    openssl enc -aes-256-cbc -e -in $1 -out $2
+}
+
+decrypt() {
+    openssl enc -aes-256-cbc -d -in $1 -out $2
+}

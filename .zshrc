@@ -19,6 +19,7 @@ PROMPT='%{$(pwd|grep --color=always /)%${#PWD}G%} %(!.%F{red}.%F{cyan})%n%f@%F{y
 unamestr=$(uname)
 
 alias ls='ls -G'
+alias ll='ls -G -l'
 alias peeps='ssh kwaugh@peeps.cs.utexas.edu'
 alias peepsy='ssh -Y kwaugh@peeps.cs.utexas.edu'
 alias pez='ssh kwaugh@pez.cs.utexas.edu'
@@ -27,14 +28,20 @@ if [[ $unamestr == 'Darwin' ]]; then
     alias vim='mvim -v'
     alias fixdigitalocean='sudo ifconfig en0 down;sudo route -n flush;sudo ifconfig en0 up'
     alias home='cd ~/Dropbox/School\ Homework/Sophomore/2nd\ Semester'
+    eval "$(thefuck --alias)"
+elif [[ $unamestr == 'Linux' ]]; then
+    alias open='gnome-open'
 else
     alias home='cd /cygdrive/c/Users/keivaun'
 fi
 alias homeserver='ssh keivaun@70.114.241.139'
 alias digitalocean='ssh 192.241.244.206'
-eval "$(thefuck --alias)"
 alias python2='python'
 alias digitalocean='ssh root@192.241.244.206'
+
+l() {
+    /projects/cs345.tdillig/l-interpreter $1
+}
 
 
 set -o vi

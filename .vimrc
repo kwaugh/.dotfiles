@@ -11,6 +11,7 @@ syntax on
 let mapleader = ","
 let g:mapleader = ","
 
+
 augroup vimrc_autocmds
     autocmd BufEnter * highlight OverLength ctermbg=red guibg=#592929
     autocmd BufEnter * match OverLength /\%81v.*/
@@ -19,6 +20,8 @@ augroup END
 " Fast saving
 nmap <leader>w :w!<cr>
 
+" omni completion
+set omnifunc=syntaxcomplete#Complete
 " Tab Settings
 set tabstop=4 " number of visual spaces a tab counts for
 set shiftwidth=4

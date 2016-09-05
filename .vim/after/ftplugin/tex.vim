@@ -1,2 +1,1 @@
-set colorcolumn=
-
+highlight clear OverLength

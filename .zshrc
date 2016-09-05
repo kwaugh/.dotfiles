@@ -45,3 +45,13 @@ l() {
 
 
 set -o vi
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
+encrypt() {
+    openssl enc -aes-256-cbc -e -in $1 -out $2
+}
+
+decrypt() {
+    openssl enc -aes-256-cbc -d -in $1 -out $2
+}

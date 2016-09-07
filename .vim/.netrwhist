@@ -1,6 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =4
-let g:netrw_dirhist_1='/Users/keivaunwaugh/Dropbox/School Homework/Freshman/CS 429H/kwaugh_cs429h_s15_p8'
-let g:netrw_dirhist_2='/Users/keivaunwaugh/Dropbox/School Homework/Freshman/CS 429H/kwaugh_cs429h_s15_p7/kernel'
-let g:netrw_dirhist_3='/Users/keivaunwaugh/Dropbox/School Homework/Sophomore/CS 439H/projects/kwaugh_cs439h_f15_pc'
-let g:netrw_dirhist_4='/Users/keivaunwaugh/Documents/frisbee-forms/frisbee-forms/views'

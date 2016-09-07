@@ -11,15 +11,16 @@ syntax on
 let mapleader = ","
 let g:mapleader = ","
 
-
-augroup vimrc_autocmds
-    autocmd BufEnter * highlight OverLength ctermbg=red guibg=#592929
-    autocmd BufEnter * match OverLength /\%81v.*/
-augroup END
+"augroup vimrc_autocmds
+"    autocmd BufEnter * highlight OverLength ctermbg=red guibg=#592929
+"    autocmd BufEnter * match OverLength /\%81v.*/
+"augroup END
 
 " Fast saving
 nmap <leader>w :w!<cr>
 
+" Fuzzy file finding
+set runtimepath^=~/.vim/bundle/ctrlp.vim
 " omni completion
 set omnifunc=syntaxcomplete#Complete
 " Tab Settings
@@ -70,6 +71,7 @@ nnoremap <leader>s :mksession<CR>
 
 " adjust configuration for such hostile environment as Windows {{{
 if has("darwin")
+elseif has("unix")
 else
     " Cygwin stuff
     let &t_ti.="\e[1 q"

@@ -35,7 +35,7 @@ elif [[ $unamestr == 'Linux' ]]; then
     alias ls='ls --color'
     alias ll='ls -l --color'
     alias reference-lexer='/projects/cs345.tdillig/lexer'
-    setxkbmap -option caps:escape " map caps lock to escape
+    setxkbmap -option caps:escape
 else
     alias home='cd /cygdrive/c/Users/keivaun'
 fi

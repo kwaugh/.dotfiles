@@ -60,3 +60,7 @@ encrypt() {
 decrypt() {
     openssl enc -aes-256-cbc -d -in $1 -out $2
 }
+
+dgrep() {
+    grep -r -I -n -H $1 $2
+}

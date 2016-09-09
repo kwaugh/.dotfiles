@@ -31,6 +31,11 @@ if [[ $unamestr == 'Darwin' ]]; then
     eval "$(thefuck --alias)"
 elif [[ $unamestr == 'Linux' ]]; then
     alias open='gnome-open'
+    alias ray='cd ~/Documents/graphics/ray' " go to ray tracer directory on lab machine"
+    alias ls='ls --color'
+    alias ll='ls -l --color'
+    alias reference-lexer='/projects/cs345.tdillig/lexer'
+    setxkbmap -option caps:escape " map caps lock to escape
 else
     alias home='cd /cygdrive/c/Users/keivaun'
 fi

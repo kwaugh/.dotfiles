@@ -35,7 +35,6 @@ set cindent
 
 set relativenumber  " relative line numbers
 set number          " display absolute line number of current line
-set cursorline      " highlight the current line
 set wildmenu        " visual autocomplete for command menu
 set showmatch       " highlight matching [{()}]
 set incsearch       " search as characters are entered
@@ -66,7 +65,7 @@ nmap L :tabn<CR>
 " absolute line number jumping by typing line number then enter
 :nnoremap <CR> G
 " save session
-nnoremap <leader>s :mksession<CR>
+nnoremap <leader>s :mksession!<CR>
 
 
 " adjust configuration for such hostile environment as Windows {{{

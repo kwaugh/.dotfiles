@@ -35,6 +35,7 @@ elif [[ $unamestr == 'Linux' ]]; then
     alias ls='ls --color'
     alias ll='ls -l --color'
     alias reference-lexer='/projects/cs345.tdillig/lexer'
+    export TERM=xterm-256color " use 256 colors in vim"
     setxkbmap -option caps:escape
 else
     alias home='cd /cygdrive/c/Users/keivaun'

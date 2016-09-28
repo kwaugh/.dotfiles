@@ -32,6 +32,7 @@ if [[ $unamestr == 'Darwin' ]]; then
 elif [[ $unamestr == 'Linux' ]]; then
     alias open='gnome-open'
     alias ray='cd ~/Documents/graphics/ray' " go to ray tracer directory on lab machine"
+    alias menger='cd ~/Documents/graphics/menger' " go to menger directory on lab machine"
     alias ls='ls --color'
     alias ll='ls -l --color'
     alias reference-lexer='/projects/cs345.tdillig/lexer'
@@ -63,5 +64,5 @@ decrypt() {
 }
 
 dgrep() {
-    grep -r -I -n -H --exclude="*.out" $1 $2
+    grep -r -I -n -H --exclude="*.out" --exclude="*.output" $1 $2
 }

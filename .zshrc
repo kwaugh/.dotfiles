@@ -36,20 +36,12 @@ elif [[ $unamestr == 'Linux' ]]; then
     alias ls='ls --color'
     alias ll='ls -l --color'
     alias reference-lexer='/projects/cs345.tdillig/lexer'
+    alias maker="make -j8; bin/*"
     export TERM=xterm-256color
     setxkbmap -option caps:escape
-else
-    alias home='cd /cygdrive/c/Users/keivaun'
 fi
 alias homeserver='ssh keivaun@70.114.241.139'
-alias digitalocean='ssh 192.241.244.206'
-alias python2='python'
 alias digitalocean='ssh root@192.241.244.206'
-
-l() {
-    /projects/cs345.tdillig/l-interpreter $1
-}
-
 
 set -o vi
 

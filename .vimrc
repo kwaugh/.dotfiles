@@ -30,6 +30,7 @@ set tabstop=4 " number of visual spaces a tab counts for
 set shiftwidth=4
 set softtabstop=4 " number of spaces in tab when editing
 set expandtab " tabs are spaces
+set ruler
 
 " Indentation Settings
 set autoindent

@@ -65,8 +65,8 @@ nmap <F7> :tabp<CR>
 nmap <F8> :tabn<CR>
 nmap H :tabp<CR>
 nmap L :tabn<CR>
-" absolute line number jumping by typing line number then enter
-:nnoremap <CR> G
+nmap <S-Enter> O<Esc>
+nmap <CR> o<Esc>
 " save session
 nnoremap <leader>s :mksession!<CR>
 

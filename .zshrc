@@ -19,7 +19,7 @@ PROMPT='%{$(pwd|grep --color=always /)%${#PWD}G%} %(!.%F{red}.%F{cyan})%n%f@%F{y
 unamestr=$(uname)
 
 alias ls='ls -G'
-alias ll='ls -G -l'
+alias ll='ls -G -l -a'
 alias peeps='ssh kwaugh@peeps.cs.utexas.edu'
 alias peepsy='ssh -Y kwaugh@peeps.cs.utexas.edu'
 alias pez='ssh kwaugh@pez.cs.utexas.edu'
@@ -30,11 +30,11 @@ if [[ $unamestr == 'Darwin' ]]; then
     alias home='cd ~/Dropbox/School\ Homework/Sophomore/2nd\ Semester'
     eval "$(thefuck --alias)"
 elif [[ $unamestr == 'Linux' ]]; then
-    alias open='gnome-open'
+    alias open='xdg-open'
     alias ray='cd ~/Documents/graphics/ray' " go to ray tracer directory on lab machine"
     alias menger='cd ~/Documents/graphics/menger' " go to menger directory on lab machine"
     alias ls='ls --color'
-    alias ll='ls -l --color'
+    alias ll='ls -l --color -a'
     alias reference-lexer='/projects/cs345.tdillig/lexer'
     alias maker="make -j8; bin/*"
     export TERM=xterm-256color
@@ -58,3 +58,5 @@ decrypt() {
 dgrep() {
     grep -r -I -n -H --exclude="*.out" --exclude="*.output" $1 $2
 }
+
+xset m 0.1 0.1

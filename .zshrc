@@ -41,6 +41,7 @@ elif [[ $unamestr == 'Linux' ]]; then
     setxkbmap -option caps:escape
 fi
 alias homeserver='ssh keivaun@70.114.241.139'
+alias apartmentserver='ssh kwaugh@70.114.210.103'
 alias digitalocean='ssh root@192.241.244.206'
 
 set -o vi

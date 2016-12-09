@@ -32,6 +32,16 @@ set softtabstop=4 " number of spaces in tab when editing
 set expandtab " tabs are spaces
 set ruler
 
+" ctrlp ignore stuff
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
+let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\v[\/]\.(git|hg|svn)$|node_modules$',
+  \ 'file': '\v\.(exe|so|dll)$',
+  \ 'link': 'some_bad_symbolic_links',
+  \ }
+
+
 " Indentation Settings
 set autoindent
 set cindent
@@ -65,8 +75,7 @@ nmap <F7> :tabp<CR>
 nmap <F8> :tabn<CR>
 nmap H :tabp<CR>
 nmap L :tabn<CR>
-nmap <S-Enter> O<Esc>
-nmap <CR> o<Esc>
+nmap <CR> o<Esc>k
 " save session
 nnoremap <leader>s :mksession!<CR>
 
@@ -94,6 +103,8 @@ set grepprg=grep\ -nH\ $*
 " 'plaintex' instead of 'tex', which results in vim-latex not being loaded.
 " The following changes the default filetype back to 'tex':
 let g:tex_flavor='latex'
+let g:Tex_DefaultTargetFormat='pdf'
+let g:Tex_CompileRule_pdf='pdflatex -interaction=nonstopmode $*'
 
 function ShowSpaces(...)
   let @/='\v(\s+$)|( +\ze\t)'

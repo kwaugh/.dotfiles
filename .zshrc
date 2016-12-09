@@ -39,6 +39,7 @@ elif [[ $unamestr == 'Linux' ]]; then
     alias maker="make -j8; bin/*"
     export TERM=xterm-256color
     setxkbmap -option caps:escape
+    xset m 0.1 0.1
 fi
 alias homeserver='ssh keivaun@70.114.241.139'
 alias apartmentserver='ssh kwaugh@70.114.210.103'
@@ -59,5 +60,3 @@ decrypt() {
 dgrep() {
     grep -r -I -n -H --exclude="*.out" --exclude="*.output" $1 $2
 }
-
-xset m 0.1 0.1

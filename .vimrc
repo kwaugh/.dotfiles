@@ -79,6 +79,11 @@ nmap <CR> o<Esc>k
 " save session
 nnoremap <leader>s :mksession!<CR>
 
+if exists('+colorcolumn')
+    set colorcolumn=95
+  else
+    au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>95v.\+', -1)
+endif
 
 " adjust configuration for such hostile environment as Windows {{{
 if has("darwin")

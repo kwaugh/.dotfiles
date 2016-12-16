@@ -39,7 +39,7 @@ elif [[ $unamestr == 'Linux' ]]; then
     alias open='xdg-open'
     alias ls='ls --color'
     alias ll='ls -l --color -a'
-    export TERM=xterm-256color
+    export TERM=screen-256color
 fi
 
 set -o vi

@@ -18,6 +18,7 @@ let g:mapleader = ","
 
 " Fast saving
 nmap <leader>w :w!<cr>
+nmap <leader>q :q<cr>
 
 " Fuzzy file finding
 set runtimepath^=~/.vim/bundle/ctrlp.vim
@@ -63,8 +64,8 @@ set mouse=a
 set shiftround
 
 " j and k treat wrapped lines as distinct lines when going up and down the page
-nmap j gj
-nmap k gk
+" nmap j gj
+" nmap k gk
 " move to beginning/end of line
 nnoremap B ^
 nnoremap E $

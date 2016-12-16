@@ -76,7 +76,7 @@ nmap <F7> :tabp<CR>
 nmap <F8> :tabn<CR>
 nmap H :tabp<CR>
 nmap L :tabn<CR>
-nmap <CR> o<Esc>k
+nmap <CR> i<CR><Esc>l
 " save session
 nnoremap <leader>s :mksession!<CR>
 

@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<FileZilla3>
+    <Settings>
+        <Setting name="Use Pasv mode">1</Setting>
+        <Setting name="Limit local ports">0</Setting>
+        <Setting name="Limit ports low">6000</Setting>
+        <Setting name="Limit ports high">7000</Setting>
+        <Setting name="External IP mode">0</Setting>
+        <Setting name="External IP" />
+        <Setting name="External address resolver">http://ip.filezilla-project.org/ip.php</Setting>
+        <Setting name="Last resolved IP" />
+        <Setting name="No external ip on local conn">1</Setting>
+        <Setting name="Pasv reply fallback mode">0</Setting>
+        <Setting name="Timeout">20</Setting>
+        <Setting name="Logging Debug Level">0</Setting>
+        <Setting name="Logging Raw Listing">0</Setting>
+        <Setting name="fzsftp executable" />
+        <Setting name="Allow transfermode fallback">1</Setting>
+        <Setting name="Reconnect count">2</Setting>
+        <Setting name="Reconnect delay">5</Setting>
+        <Setting name="Enable speed limits">0</Setting>
+        <Setting name="Speedlimit inbound">100</Setting>
+        <Setting name="Speedlimit outbound">20</Setting>
+        <Setting name="Speedlimit burst tolerance">0</Setting>
+        <Setting name="Preallocate space">0</Setting>
+        <Setting name="View hidden files">0</Setting>
+        <Setting name="Preserve timestamps">0</Setting>
+        <Setting name="Socket recv buffer size (v2)">4194304</Setting>
+        <Setting name="Socket send buffer size (v2)">262144</Setting>
+        <Setting name="FTP Keep-alive commands">0</Setting>
+        <Setting name="FTP Proxy type">0</Setting>
+        <Setting name="FTP Proxy host" />
+        <Setting name="FTP Proxy user" />
+        <Setting name="FTP Proxy password" />
+        <Setting name="FTP Proxy login sequence" />
+        <Setting name="SFTP keyfiles" />
+        <Setting name="Proxy type">0</Setting>
+        <Setting name="Proxy host" />
+        <Setting name="Proxy port">0</Setting>
+        <Setting name="Proxy user" />
+        <Setting name="Proxy password" />
+        <Setting name="Logging file" />
+        <Setting name="Logging filesize limit">10</Setting>
+        <Setting name="Logging show detailed logs">0</Setting>
+        <Setting name="Size format">0</Setting>
+        <Setting name="Size thousands separator">1</Setting>
+        <Setting name="Size decimal places">1</Setting>
+        <Setting name="Number of Transfers">2</Setting>
+        <Setting name="Ascii Binary mode">0</Setting>
+        <Setting name="Auto Ascii files">am|asp|bat|c|cfm|cgi|conf|cpp|css|dhtml|diz|h|hpp|htm|html|in|inc|java|js|jsp|lua|m4|mak|md5|nfo|nsi|pas|patch|php|phtml|pl|po|py|qmail|sh|sha1|sha256|sha512|shtml|sql|svg|tcl|tpl|txt|vbs|xhtml|xml|xrc</Setting>
+        <Setting name="Auto Ascii no extension">1</Setting>
+        <Setting name="Auto Ascii dotfiles">1</Setting>
+        <Setting name="Theme">opencrystal/</Setting>
+        <Setting name="Language Code" />
+        <Setting name="Last Server Path">1 0 11 analyzit_fm</Setting>
+        <Setting name="Concurrent download limit">0</Setting>
+        <Setting name="Concurrent upload limit">0</Setting>
+        <Setting name="Update Check">1</Setting>
+        <Setting name="Update Check Interval">7</Setting>
+        <Setting name="Last automatic update check">2015-05-22 20:56:37</Setting>
+        <Setting name="Update Check New Version">nightly 2015-05-22 http://filezilla-project.org/nightlies/2015-05-22/x86_64-apple-darwin13.4.0/FileZilla3.app.tar.bz2 7619299 sha512 ee56955d411bac6e8b63536cdcb46810a15e7a2e3c747d14fc6023e80481e58515612e544d4feef728eecf16b01bc910a32c3aad10ed6dc8a1c8119afa8a2780 &#x0A;release 3.11.0.1 http://downloads.sourceforge.net/filezilla/FileZilla_3.11.0.1_macosx-x86.app.tar.bz2 7281552 sha512 139558da1069f21a053f6c8342e82c7060c5875896773416b6e92a809573268fc5eea61a0add5e61ad9606ad14b218e5771f58256174f2f4e8aedc5343d4f900&#x0A;&#x0A;3.11.0.1 (2015-05-22)&#x0A;&#x0A;! Reject Diffie-Hellman Groups smaller than 1024 bits when using FTP over TLS to protect against the Logjam attack&#x0A;- Do not bind the source IP address of the data connection if the server is not configured properly&#x0A;- Deleting bookmarks from the bookmarks dialog no longer deletes the wrong bookmark&#x0A;- Fixed CPU compatibility issues on 64bit binaries&#x0A;&#x0A;3.11.0 (2015-05-19)&#x0A;&#x0A;- Ensure the title bar is at least partially inside the screen boundary when restoring a saved window position&#x0A;- Fixed crash if opening a wrapped dialog without having restarted FileZilla after having change language to Chinese or Japanese&#x0A;&#x0A;3.11.0-rc1 (2015-05-12)&#x0A;&#x0A;+ Implemented new date/time handling to solve issues with DST conversion&#x0A;+ *nix: Official Linux binaries are now built for Debian Jessie&#x0A;+ In passive mode transfer, the source IP of the data connection is now bound to the same source IP as the control connection&#x0A;- Requeueing of folder items no longer prints an error message&#x0A;- Fix disabling of timeouts&#x0A;- MSW: Fix the returned error level of the installer&#x0A;- Fix a crash if disconnecting during transfers&#x0A;- Official binaries now link against GnuTLS to 3.4.1&#x0A;- Official binaries now link against SQLite to 3.8.10.1&#x0A;</Setting>
+        <Setting name="Update Check Check Beta">0</Setting>
+        <Setting name="Show debug menu">0</Setting>
+        <Setting name="File exists action download">0</Setting>
+        <Setting name="File exists action upload">0</Setting>
+        <Setting name="Allow ascii resume">0</Setting>
+        <Setting name="Greeting version">3.10.3</Setting>
+        <Setting name="Onetime Dialogs" />
+        <Setting name="Show Tree Local">1</Setting>
+        <Setting name="Show Tree Remote">1</Setting>
+        <Setting name="File Pane Layout">0</Setting>
+        <Setting name="File Pane Swap">0</Setting>
+        <Setting name="Last local directory">/Users/keivaunwaugh/Dropbox/Analyzit/</Setting>
+        <Setting name="Filelist directory sort">0</Setting>
+        <Setting name="Filelist name sort">1</Setting>
+        <Setting name="Queue successful autoclear">0</Setting>
+        <Setting name="Queue column widths">180 60 180 80 60 150</Setting>
+        <Setting name="Local filelist colwidths">120 80 100 120</Setting>
+        <Setting name="Remote filelist colwidths">153 75 80 100 80 80</Setting>
+        <Setting name="Window position and size">0 2 23 1146 694 </Setting>
+        <Setting name="Splitter positions (v2)">97 -132 500000000 170 170 500000000</Setting>
+        <Setting name="Local filelist sortorder">0 0</Setting>
+        <Setting name="Remote filelist sortorder">1 3</Setting>
+        <Setting name="Time Format" />
+        <Setting name="Date Format" />
+        <Setting name="Show message log">1</Setting>
+        <Setting name="Show queue">1</Setting>
+        <Setting name="Default editor" />
+        <Setting name="Always use default editor">0</Setting>
+        <Setting name="Inherit system associations">1</Setting>
+        <Setting name="Custom file associations" />
+        <Setting name="Comparison mode">1</Setting>
+        <Setting name="Comparison threshold">1</Setting>
+        <Setting name="Site Manager position" />
+        <Setting name="Theme icon size" />
+        <Setting name="Timestamp in message log">0</Setting>
+        <Setting name="Sitemanager last selected" />
+        <Setting name="Local filelist shown columns">1111</Setting>
+        <Setting name="Remote filelist shown columns">111111</Setting>
+        <Setting name="Local filelist column order">0,1,2,3</Setting>
+        <Setting name="Remote filelist column order">0,1,2,3,4,5</Setting>
+        <Setting name="Filelist status bar">1</Setting>
+        <Setting name="Filter toggle state">0</Setting>
+        <Setting name="Show quickconnect bar">1</Setting>
+        <Setting name="Messagelog position">0</Setting>
+        <Setting name="Last connected site" />
+        <Setting name="File doubleclock action">0</Setting>
+        <Setting name="Dir doubleclock action">0</Setting>
+        <Setting name="Minimize to tray">0</Setting>
+        <Setting name="Search column widths" />
+        <Setting name="Search column shown" />
+        <Setting name="Search column order" />
+        <Setting name="Search window size" />
+        <Setting name="Comparison hide identical">0</Setting>
+        <Setting name="Search sort order" />
+        <Setting name="Edit track local">1</Setting>
+        <Setting name="Prevent idle sleep">1</Setting>
+        <Setting name="Filteredit window size" />
+        <Setting name="Enable invalid char filter">1</Setting>
+        <Setting name="Invalid char replace">_</Setting>
+        <Setting name="Already connected choice">3</Setting>
+        <Setting name="Edit status dialog size" />
+        <Setting name="Display current speed">0</Setting>
+        <Setting name="Toolbar hidden">0</Setting>
+        <Setting name="Strip VMS revisions">0</Setting>
+        <Setting name="Show Site Manager on startup">0</Setting>
+        <Setting name="Prompt password change">0</Setting>
+        <Setting name="Persistent Choices">0</Setting>
+        <Setting name="Config Location">/Users/keivaunwaugh/.config/filezilla/</Setting>
+        <Setting name="Kiosk mode">0</Setting>
+        <Setting name="Disable update check">0</Setting>
+        <LastServer>
+            <Host>fms3.longtermsolutions.com</Host>
+            <Port>21</Port>
+            <Protocol>0</Protocol>
+            <Type>0</Type>
+            <User>analyzit</User>
+            <Pass encoding="base64">NnZ6d2k4dGc=</Pass>
+            <Logontype>1</Logontype>
+            <TimezoneOffset>0</TimezoneOffset>
+            <PasvMode>MODE_DEFAULT</PasvMode>
+            <MaximumMultipleConnections>0</MaximumMultipleConnections>
+            <EncodingType>Auto</EncodingType>
+            <BypassProxy>0</BypassProxy>
+        </LastServer>
+    </Settings>
+</FileZilla3>

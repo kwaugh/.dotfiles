@@ -7,6 +7,17 @@ filetype plugin indent on
 colorscheme badwolf
 syntax on
 
+" Syntastic recommended defaults
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+let g:syntastic_javascript_checkers = ['jshint']
+
 " Set a new <leader> character
 let mapleader = ","
 let g:mapleader = ","

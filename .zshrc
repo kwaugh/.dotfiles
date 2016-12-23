@@ -14,7 +14,7 @@ compinit
 setopt PROMPT_SUBST
 PROMPT='%{$(pwd|grep --color=always /)%${#PWD}G%} %(!.%F{red}.%F{cyan})%n%f@%F{yellow}%m%f%(!.%F{red}.)%#%f '
 
-# Custom zshrc configuration
+export PATH="$HOME/Library/Haskell/bin:$PATH"
 
 unamestr=$(uname)
 

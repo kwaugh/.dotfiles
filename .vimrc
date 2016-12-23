@@ -20,6 +20,10 @@ let g:syntastic_javascript_checkers = ['jshint']
 
 " Youcompleteme fix
 let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
+" Disable ycm for haskell files
+let g:ycm_filetype_blacklist = {
+      \ 'hs' : 1,
+\}
 
 " Set a new <leader> character
 let mapleader = ","

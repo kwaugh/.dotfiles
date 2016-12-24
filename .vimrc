@@ -19,7 +19,7 @@ let g:syntastic_check_on_wq = 0
 let g:syntastic_javascript_checkers = ['jshint']
 
 " Youcompleteme fix
-let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
+let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
 " Disable ycm for haskell files
 let g:ycm_filetype_blacklist = {
       \ 'hs' : 1,

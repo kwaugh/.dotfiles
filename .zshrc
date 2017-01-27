@@ -19,10 +19,12 @@ export PATH="/Applications/MATLAB_R2016b.app/bin/:$PATH"
 
 unamestr=$(uname)
 
-alias peeps='ssh kwaugh@peeps.cs.utexas.edu'
-alias peepsy='ssh -Y kwaugh@peeps.cs.utexas.edu'
-alias pez='ssh kwaugh@pez.cs.utexas.edu'
+alias plant='ssh kwaugh@planthopper.cs.utexas.edu'
+alias planty='ssh -Y kwaugh@planthopper.cs.utexas.edu'
+alias orion='ssh kwaugh@orion.cs.utexas.edu'
+alias oriony='ssh -Y kwaugh@orion.cs.utexas.edu'
 alias bumblebee='ssh kwaugh@bumblebee.cs.utexas.edu'
+alias bumblebeey='ssh -Y kwaugh@bumblebee.cs.utexas.edu'
 
 alias homeserver='ssh keivaun@70.114.241.139'
 alias apartmentserver='ssh kwaugh@70.114.210.103'

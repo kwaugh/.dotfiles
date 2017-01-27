@@ -14,7 +14,8 @@ compinit
 setopt PROMPT_SUBST
 PROMPT='%{$(pwd|grep --color=always /)%${#PWD}G%} %(!.%F{red}.%F{cyan})%n%f@%F{yellow}%m%f%(!.%F{red}.)%#%f '
 
-export PATH="$HOME/Library/Haskell/bin:$PATH"
+export PATH="/Users/keivaunwaugh/Library/Haskell/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/Library/TeX/texbin:$PATH"
+export PATH="/Applications/MATLAB_R2016b.app/bin/:$PATH"
 
 unamestr=$(uname)
 
@@ -27,7 +28,7 @@ alias homeserver='ssh keivaun@70.114.241.139'
 alias apartmentserver='ssh kwaugh@70.114.210.103'
 alias digitalocean='ssh root@192.241.244.206'
 
-alias home='cd ~/Dropbox/School\ Homework/Sophomore/2nd\ Semester'
+alias spring='cd ~/Dropbox/School\ Homework/junior/spring'
 
 if [[ $unamestr == 'Darwin' ]]; then
     alias vim='mvim -v'
@@ -57,3 +58,5 @@ decrypt() {
 dgrep() {
     grep -rInH --exclude="*.{out,output}" --exclude-dir="node_modules" $1 $2
 }
+
+cd ~

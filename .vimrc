@@ -23,6 +23,7 @@ let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
 " Disable ycm for haskell files
 let g:ycm_filetype_blacklist = {
       \ 'hs' : 1,
+      \ 'tex' : 1,
 \}
 
 " Set a new <leader> character
@@ -38,6 +39,9 @@ let g:mapleader = ","
 nmap <leader>w :w!<cr>
 nmap <leader>q :q<cr>
 nmap <leader>x :x<cr>
+
+" Toggle Syntastic
+nmap <leader>t :SyntasticToggleMode<cr>
 
 " Fuzzy file finding
 set runtimepath^=~/.vim/bundle/ctrlp.vim

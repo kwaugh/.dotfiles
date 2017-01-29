@@ -18,6 +18,14 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_javascript_checkers = ['jshint']
 
+" Youcompleteme fix
+let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
+" Disable ycm for haskell files
+let g:ycm_filetype_blacklist = {
+      \ 'hs' : 1,
+      \ 'tex' : 1,
+\}
+
 " Set a new <leader> character
 let mapleader = ","
 let g:mapleader = ","
@@ -30,6 +38,10 @@ let g:mapleader = ","
 " Fast saving
 nmap <leader>w :w!<cr>
 nmap <leader>q :q<cr>
+nmap <leader>x :x<cr>
+
+" Toggle Syntastic
+nmap <leader>t :SyntasticToggleMode<cr>
 
 " Fuzzy file finding
 set runtimepath^=~/.vim/bundle/ctrlp.vim
@@ -38,7 +50,7 @@ set omnifunc=syntaxcomplete#Complete
 " Tab Settings
 " Share clipboard with general OS clipboard
 set clipboard=unnamed
-set tabstop=4 " number of visual spaces a tab counts for
+set tabstop=8 " number of visual spaces a tab counts for
 set shiftwidth=4
 set softtabstop=4 " number of spaces in tab when editing
 set expandtab " tabs are spaces

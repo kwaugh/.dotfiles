@@ -103,9 +103,9 @@ nmap <CR> i<CR><Esc>l
 nnoremap <leader>s :mksession!<CR>
 
 if exists('+colorcolumn')
-    set colorcolumn=73
+    set colorcolumn=95
   else
-    au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>73v.\+', -1)
+    au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>95v.\+', -1)
 endif
 
 " adjust configuration for such hostile environment as Windows {{{

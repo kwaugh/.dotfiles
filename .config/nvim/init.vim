@@ -77,7 +77,7 @@ set incsearch       " search as characters are entered
 set hlsearch        " highlights search matches
 set ignorecase      " ignore case when searching
 set smartcase       " smart case searching
-nnoremap <leader>c :nohlsearch<CR>
+nmap <leader>c :nohlsearch<CR>
 
 " Allow for mouse click to move cursor
 set mouse=a
@@ -89,8 +89,8 @@ set shiftround
 " nmap j gj
 " nmap k gk
 " move to beginning/end of line
-nnoremap B ^
-nnoremap E $
+nmap B ^
+nmap E $
 " Insert single character by pressing space
 nmap <Space> i_<Esc>r
 " Change tabs
@@ -100,7 +100,9 @@ nmap H :tabp<CR>
 nmap L :tabn<CR>
 nmap <CR> i<CR><Esc>l
 " save session
-nnoremap <leader>s :mksession!<CR>
+nmap <leader>s :mksession!<CR>
+" tab expansion
+nmap <leader>a :tab all<CR>
 
 if exists('+colorcolumn')
     set colorcolumn=73
@@ -153,6 +155,6 @@ endfunction
 
 command -bar -nargs=? ShowSpaces call ShowSpaces(<args>)
 command -bar -nargs=0 -range=% TrimSpaces <line1>,<line2>call TrimSpaces()
-nnoremap <F12>     :ShowSpaces 1<CR>
-nnoremap <S-F12>   m`:TrimSpaces<CR>``
-vnoremap <S-F12>   :TrimSpaces<CR>
+nmap <F12>     :ShowSpaces 1<CR>
+nmap <S-F12>   m`:TrimSpaces<CR>``
+nmap <S-F12>   :TrimSpaces<CR>

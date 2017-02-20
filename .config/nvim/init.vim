@@ -100,12 +100,14 @@ nmap H :tabp<CR>
 nmap L :tabn<CR>
 nmap <CR> i<CR><Esc>l
 " save session
-nnoremap <leader>s :mksession!<CR>
+nmap <leader>s :mksession!<CR>
+" expand all tabs
+nmap <leader>a :tab all<CR>
 
 if exists('+colorcolumn')
-    set colorcolumn=95
+    set colorcolumn=80
   else
-    au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>95v.\+', -1)
+    au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>80v.\+', -1)
 endif
 
 " adjust configuration for such hostile environment as Windows {{{

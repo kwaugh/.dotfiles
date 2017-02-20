@@ -85,7 +85,7 @@ set mouse=a
 " Make all tabs align
 set shiftround
 
-" j and k treat wrapped lines as distinct lines when going up and down the page
+" j/k treat wrapped lines as distinct lines when going up/down the page
 " nmap j gj
 " nmap k gk
 " move to beginning/end of line
@@ -104,6 +104,8 @@ nmap <leader>s :mksession!<CR>
 " tab expansion
 nmap <leader>a :tab all<CR>
 
+" colorcolumn set to 73 so that 13in macbook pro can do two vim screens
+" side by side with my font settings in iterm2
 if exists('+colorcolumn')
     set colorcolumn=73
   else
@@ -129,9 +131,6 @@ endif
 " program to always generate a file-name.
 set grepprg=grep\ -nH\ $*
 
-" OPTIONAL: Starting with Vim 7, the filetype of empty .tex files defaults to
-" 'plaintex' instead of 'tex', which results in vim-latex not being loaded.
-" The following changes the default filetype back to 'tex':
 let g:tex_flavor='latex'
 let g:Tex_DefaultTargetFormat='pdf'
 let g:Tex_CompileRule_pdf='pdflatex -interaction=nonstopmode $*'

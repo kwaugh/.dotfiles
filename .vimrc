@@ -57,13 +57,13 @@ set expandtab " tabs are spaces
 set ruler
 
 " ctrlp ignore stuff
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
+set wildignore+=*/tmp/*,*.zip,.svn,CVS,.git,*.o,*.a,*.class,*.mo,*.la,*.so,
+set wildignore+=*.obj,*.swp,*.jpg,*.png,*.xpm,*.gif,*.pdf,*.bak,*.beam
 let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\v[\/]\.(git|hg|svn)$|node_modules$',
+  \ 'dir':  '\v[\/]\.(git|hg|svn)$|node_modules$|eigen$',
   \ 'file': '\v\.(exe|so|dll|o)$',
   \ 'link': 'some_bad_symbolic_links',
   \ }
-
 
 " Indentation Settings
 set autoindent

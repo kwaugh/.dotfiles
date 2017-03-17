@@ -6,6 +6,10 @@ bindkey -v
 # End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall
 zstyle :compinstall filename '/Users/keivaunwaugh/.zshrc'
+# Filename suffixes to ignore during completion (except after rm command)
+zstyle ':completion:*:*:(^rm):*:*files' ignored-patterns '*?.o'
+# the same for old style completion
+fignore=(.o .c~ .old .pro)
 
 autoload -Uz compinit
 compinit
@@ -61,5 +65,3 @@ decrypt() {
 dgrep() {
     grep -rInH --exclude="*.{out,output}" --exclude-dir="node_modules" $1 $2
 }
-
-cd ~

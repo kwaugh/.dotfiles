@@ -60,7 +60,7 @@ set ruler
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
 let g:ctrlp_custom_ignore = {
   \ 'dir':  '\v[\/]\.(git|hg|svn)$|node_modules$',
-  \ 'file': '\v\.(exe|so|dll)$',
+  \ 'file': '\v\.(exe|so|dll|o)$',
   \ 'link': 'some_bad_symbolic_links',
   \ }
 
@@ -107,9 +107,9 @@ nmap <leader>a :tab all<CR>
 " colorcolumn set to 73 so that 13in macbook pro can do two vim screens
 " side by side with my font settings in iterm2
 if exists('+colorcolumn')
-    set colorcolumn=73
+    set colorcolumn=80
   else
-    au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>73v.\+', -1)
+    au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>80v.\+', -1)
 endif
 
 " adjust configuration for such hostile environment as Windows {{{

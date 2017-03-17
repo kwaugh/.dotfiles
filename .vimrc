@@ -60,7 +60,7 @@ set ruler
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
 let g:ctrlp_custom_ignore = {
   \ 'dir':  '\v[\/]\.(git|hg|svn)$|node_modules$',
-  \ 'file': '\v\.(exe|so|dll)$',
+  \ 'file': '\v\.(exe|so|dll|o)$',
   \ 'link': 'some_bad_symbolic_links',
   \ }
 
@@ -77,7 +77,7 @@ set incsearch       " search as characters are entered
 set hlsearch        " highlights search matches
 set ignorecase      " ignore case when searching
 set smartcase       " smart case searching
-nnoremap <leader>c :nohlsearch<CR>
+nmap <leader>c :nohlsearch<CR>
 
 " Allow for mouse click to move cursor
 set mouse=a
@@ -85,12 +85,12 @@ set mouse=a
 " Make all tabs align
 set shiftround
 
-" j and k treat wrapped lines as distinct lines when going up and down the page
+" j/k treat wrapped lines as distinct lines when going up/down the page
 " nmap j gj
 " nmap k gk
 " move to beginning/end of line
-nnoremap B ^
-nnoremap E $
+nmap B ^
+nmap E $
 " Insert single character by pressing space
 nmap <Space> i_<Esc>r
 " Change tabs
@@ -100,12 +100,16 @@ nmap H :tabp<CR>
 nmap L :tabn<CR>
 nmap <CR> i<CR><Esc>l
 " save session
-nnoremap <leader>s :mksession!<CR>
+nmap <leader>s :mksession!<CR>
+" tab expansion
+nmap <leader>a :tab all<CR>
 
+" colorcolumn set to 73 so that 13in macbook pro can do two vim screens
+" side by side with my font settings in iterm2
 if exists('+colorcolumn')
-    set colorcolumn=95
+    set colorcolumn=80
   else
-    au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>95v.\+', -1)
+    au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>80v.\+', -1)
 endif
 
 " adjust configuration for such hostile environment as Windows {{{
@@ -127,9 +131,6 @@ endif
 " program to always generate a file-name.
 set grepprg=grep\ -nH\ $*
 
-" OPTIONAL: Starting with Vim 7, the filetype of empty .tex files defaults to
-" 'plaintex' instead of 'tex', which results in vim-latex not being loaded.
-" The following changes the default filetype back to 'tex':
 let g:tex_flavor='latex'
 let g:Tex_DefaultTargetFormat='pdf'
 let g:Tex_CompileRule_pdf='pdflatex -interaction=nonstopmode $*'
@@ -153,6 +154,6 @@ endfunction
 
 command -bar -nargs=? ShowSpaces call ShowSpaces(<args>)
 command -bar -nargs=0 -range=% TrimSpaces <line1>,<line2>call TrimSpaces()
-nnoremap <F12>     :ShowSpaces 1<CR>
-nnoremap <S-F12>   m`:TrimSpaces<CR>``
-vnoremap <S-F12>   :TrimSpaces<CR>
+nmap <F12>     :ShowSpaces 1<CR>
+nmap <S-F12>   m`:TrimSpaces<CR>``
+nmap <S-F12>   :TrimSpaces<CR>

@@ -30,7 +30,8 @@ alias homeserver='ssh keivaun@70.114.241.139'
 alias apartmentserver='ssh kwaugh@70.114.210.103'
 alias digitalocean='ssh root@192.241.244.206'
 
-alias spring='cd ~/Dropbox/School\ Homework/junior/spring'
+alias spring='cd ~/Dropbox/School/junior/spring'
+alias gitspa='git stash; git pull; git stash apply'
 
 if [[ $unamestr == 'Darwin' ]]; then
     alias vim='mvim -v'

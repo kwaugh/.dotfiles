@@ -37,12 +37,13 @@ alias digitalocean='ssh root@192.241.244.206'
 alias spring='cd ~/Dropbox/School/junior/spring'
 alias gitspa='git stash; git pull; git stash apply'
 
+eval "$(thefuck --alias)"
+
 if [[ $unamestr == 'Darwin' ]]; then
     alias vim='mvim -v'
     alias fixdigitalocean='sudo ifconfig en0 down;sudo route -n flush;sudo ifconfig en0 up'
     alias ls='ls -G'
     alias ll='ls -G -l -a'
-    eval "$(thefuck --alias)"
 elif [[ $unamestr == 'Linux' ]]; then
     alias open='xdg-open'
     alias ls='ls --color'

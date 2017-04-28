@@ -19,7 +19,6 @@ setopt PROMPT_SUBST
 PROMPT='%{$(pwd|grep --color=always /)%${#PWD}G%} %(!.%F{red}.%F{cyan})%n%f@%F{yellow}%m%f%(!.%F{red}.)%#%f '
 
 export PATH="/Users/keivaunwaugh/Library/Haskell/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/Library/TeX/texbin:$PATH"
-export PATH="/Applications/MATLAB_R2016b.app/bin/:$PATH"
 
 unamestr=$(uname)
 
@@ -44,11 +43,13 @@ if [[ $unamestr == 'Darwin' ]]; then
     alias fixdigitalocean='sudo ifconfig en0 down;sudo route -n flush;sudo ifconfig en0 up'
     alias ls='ls -G'
     alias ll='ls -G -l -a'
+    export PATH="/Applications/MATLAB_R2016b.app/bin/:$PATH"
 elif [[ $unamestr == 'Linux' ]]; then
     alias open='xdg-open'
     alias ls='ls --color'
     alias ll='ls -l --color -a'
     export TERM=screen-256color
+    export PATH="/usr/local/MATLAB/R2017a/bin:$PATH"
 fi
 
 set -o vi

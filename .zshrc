@@ -67,3 +67,7 @@ decrypt() {
 dgrep() {
     grep -rInH --exclude="*.{out,output}" --exclude-dir="node_modules" $1 $2
 }
+
+space() {
+    du -sk ~/* ~/.??* | sort -n
+}

@@ -28,6 +28,8 @@ alias orion='ssh kwaugh@orion.cs.utexas.edu'
 alias oriony='ssh -Y kwaugh@orion.cs.utexas.edu'
 alias bumblebee='ssh kwaugh@bumblebee.cs.utexas.edu'
 alias bumblebeey='ssh -Y kwaugh@bumblebee.cs.utexas.edu'
+alias gilligan='ssh kwaugh@gilligan.cs.utexas.edu'
+alias gilligany='ssh -Y kwaugh@gilligan.cs.utexas.edu'
 
 alias homeserver='ssh keivaun@70.114.241.139'
 alias apartmentserver='ssh kwaugh@70.114.210.103'

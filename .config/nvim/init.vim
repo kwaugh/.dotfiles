@@ -1,5 +1,12 @@
-" Start pathogen
-execute pathogen#infect()
+" Load vim-plug plugins
+call plug#begin('~/.config/nvim/plugged')
+Plug 'jiangmiao/auto-pairs'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-unimpaired'
+Plug 'vim-syntastic/syntastic'
+call plug#end()
 
 " Auto bracket plugin
 filetype plugin indent on

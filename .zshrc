@@ -18,6 +18,14 @@ compinit
 setopt PROMPT_SUBST
 PROMPT='%{$(pwd|grep --color=always /)%${#PWD}G%} %(!.%F{red}.%F{cyan})%n%f@%F{yellow}%m%f%(!.%F{red}.)%#%f '
 
+# oh-my-zsh settings
+export LANG=en_SG.utf8
+export ZSH=/Users/keivaunwaugh/.oh-my-zsh
+ZSH_THEME="powerlevel9k/powerlevel9k"
+plugins=(git)
+export DEFAULT_USER=keivaunwaugh
+source $ZSH/oh-my-zsh.sh
+
 export PATH="/Users/keivaunwaugh/Library/Haskell/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/Library/TeX/texbin:$PATH"
 
 unamestr=$(uname)
@@ -39,6 +47,16 @@ alias spring='cd ~/Dropbox/School/junior/spring'
 alias gitspa='git stash; git pull; git stash apply'
 
 eval "$(thefuck --alias)"
+# enable pyenv which allow you to switch between different python versions
+# check installed versions:
+#   pyenv versions
+# switch between global versions:
+#   pyenv global 3.3.1
+# set the python version for the current directory
+#   pyenv local 3.5.2
+# install a new version:
+#   pyenv install 2.7.5
+eval "$(pyenv init -)"
 
 if [[ $unamestr == 'Darwin' ]]; then
     alias vim='mvim -v'
@@ -73,3 +91,4 @@ dgrep() {
 space() {
     du -sk ~/* ~/.??* | sort -n
 }
+source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

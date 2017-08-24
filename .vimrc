@@ -1,12 +1,5 @@
-" Load vim-plug plugins
-call plug#begin('~/.config/nvim/plugged')
-Plug 'jiangmiao/auto-pairs'
-Plug 'ctrlpvim/ctrlp.vim'
-Plug 'tpope/vim-commentary'
-Plug 'tpope/vim-surround'
-Plug 'tpope/vim-unimpaired'
-Plug 'vim-syntastic/syntastic'
-call plug#end()
+" Start pathogen
+execute pathogen#infect()
 
 " Auto bracket plugin
 filetype plugin indent on
@@ -62,6 +55,7 @@ set shiftwidth=4
 set softtabstop=4 " number of spaces in tab when editing
 set expandtab " tabs are spaces
 set ruler
+set showcmd
 
 " ctrlp ignore stuff
 set wildignore+=*/tmp/*,*.zip,.svn,CVS,.git,*.o,*.a,*.class,*.mo,*.la,*.so,
@@ -162,5 +156,4 @@ endfunction
 command -bar -nargs=? ShowSpaces call ShowSpaces(<args>)
 command -bar -nargs=0 -range=% TrimSpaces <line1>,<line2>call TrimSpaces()
 nmap <F12>     :ShowSpaces 1<CR>
-nmap <S-F12>   m`:TrimSpaces<CR>``
 nmap <S-F12>   :TrimSpaces<CR>

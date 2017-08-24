@@ -6,6 +6,7 @@ Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 Plug 'vim-syntastic/syntastic'
+Plug 'Valloric/YouCompleteMe'
 call plug#end()
 
 " Auto bracket plugin
@@ -32,6 +33,12 @@ let g:ycm_filetype_blacklist = {
       \ 'hs' : 1,
       \ 'tex' : 1,
 \}
+let g:ycm_python_binary_path = 'python'
+let g:python3_host_prog = '~/.pyenv/shims/python'
+
+" And use ctrl+] when the cursor is positioned in a symbol to quickly jump to
+" a definition or declaration.
+au FileType c,cpp nnoremap <buffer> <c-]> :YcmCompleter GoTo<CR>
 
 " Set a new <leader> character
 let mapleader = ","
@@ -62,6 +69,7 @@ set shiftwidth=4
 set softtabstop=4 " number of spaces in tab when editing
 set expandtab " tabs are spaces
 set ruler
+set showcmd
 
 " ctrlp ignore stuff
 set wildignore+=*/tmp/*,*.zip,.svn,CVS,.git,*.o,*.a,*.class,*.mo,*.la,*.so,

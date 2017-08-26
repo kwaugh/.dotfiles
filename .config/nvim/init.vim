@@ -5,8 +5,11 @@ Plug 'ctrlpvim/ctrlp.vim'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
-Plug 'vim-syntastic/syntastic'
-Plug 'Valloric/YouCompleteMe'
+" Plug 'vim-syntastic/syntastic'
+" Plug 'Valloric/YouCompleteMe'
+Plug 'vim-airline/vim-airline'
+Plug 'w0rp/ale'
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 call plug#end()
 
 " Auto bracket plugin
@@ -16,25 +19,33 @@ colorscheme badwolf
 syntax on
 
 " Syntastic recommended defaults
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
+" set statusline+=%#warningmsg#
+" set statusline+=%{SyntasticStatuslineFlag()}
+" set statusline+=%*
 
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-let g:syntastic_javascript_checkers = ['jshint']
+" ALE settings
+let g:ale_sign_column_always = 1
+let g:ale_sign_error = '>>'
+let g:ale_sign_warning = '--'
+" Set this. Airline will handle the rest.
+let g:airline#extensions#ale#enabled = 1
+
+" let g:syntastic_always_populate_loc_list = 1
+" let g:syntastic_auto_loc_list = 1
+" let g:syntastic_check_on_open = 1
+" let g:syntastic_check_on_wq = 0
+" let g:syntastic_javascript_checkers = ['jshint']
 
 " Youcompleteme fix
-let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
+" let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
 " Disable ycm for haskell files
-let g:ycm_filetype_blacklist = {
-      \ 'hs' : 1,
-      \ 'tex' : 1,
-\}
-let g:ycm_python_binary_path = 'python'
-let g:python3_host_prog = '~/.pyenv/shims/python'
+" let g:ycm_filetype_blacklist = {
+"       \ 'hs' : 1,
+"       \ 'tex' : 1,
+" \}
+" let g:ycm_python_binary_path = 'python'
+" let g:python3_host_prog = '~/.pyenv/shims/python'
+call deoplete#enable()
 
 " And use ctrl+] when the cursor is positioned in a symbol to quickly jump to
 " a definition or declaration.
@@ -55,7 +66,7 @@ nmap <leader>q :q<cr>
 nmap <leader>x :x<cr>
 
 " Toggle Syntastic
-nmap <leader>t :SyntasticToggleMode<cr>
+" nmap <leader>t :SyntasticToggleMode<cr>
 
 " Fuzzy file finding
 set runtimepath^=~/.vim/bundle/ctrlp.vim

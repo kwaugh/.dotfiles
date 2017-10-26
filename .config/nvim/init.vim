@@ -10,6 +10,10 @@ Plug 'tpope/vim-unimpaired'
 Plug 'vim-airline/vim-airline'
 Plug 'w0rp/ale'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+" Nicer vim integration
+Plug 'wincent/terminus'
+" vim-git integration
+Plug 'tpope/vim-fugitive'
 call plug#end()
 
 " Auto bracket plugin
@@ -21,6 +25,8 @@ syntax on
 let g:ale_sign_column_always = 1
 let g:ale_sign_error = '>>'
 let g:ale_sign_warning = '--'
+" Use deoplete.
+let g:deoplete#enable_at_startup = 1
 
 " Set this. Airline will handle the rest.
 let g:airline#extensions#ale#enabled = 1

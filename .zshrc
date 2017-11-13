@@ -21,6 +21,7 @@ PROMPT='%{$(pwd|grep --color=always /)%${#PWD}G%} %(!.%F{red}.%F{cyan})%n%f@%F{y
 # oh-my-zsh settings
 export LANG=en_SG.utf8
 export ZSH=/Users/keivaunwaugh/.oh-my-zsh
+POWERLEVEL9K_MODE='awesome-fontconfig'
 ZSH_THEME="powerlevel9k/powerlevel9k"
 plugins=(git)
 export DEFAULT_USER=keivaunwaugh
@@ -38,13 +39,19 @@ alias bumblebee='ssh kwaugh@bumblebee.cs.utexas.edu'
 alias bumblebeey='ssh -Y kwaugh@bumblebee.cs.utexas.edu'
 alias gilligan='ssh kwaugh@gilligan.cs.utexas.edu'
 alias gilligany='ssh -Y kwaugh@gilligan.cs.utexas.edu'
+alias maverick='ssh kwaugh@maverick.tacc.utexas.edu'
 
 alias homeserver='ssh keivaun@70.114.241.139'
 alias apartmentserver='ssh kwaugh@70.114.210.103'
+alias apartmentservery='ssh -Y kwaugh@70.114.210.103'
 alias digitalocean='ssh root@192.241.244.206'
+
+alias mountbaus='sudo sshfs -o allow_other,defer_permissions,IdentityFile=~/.ssh/id_rsa kwaugh@70.114.210.103:/media/kwaugh/RAID/ ~/RAID/'
+alias unmountbaus='sudo umount ~/RAID'
 
 alias fall='cd ~/Dropbox/School/senior/fall'
 alias gitspa='git stash; git pull; git stash apply'
+alias sl='ls'
 
 eval "$(thefuck --alias)"
 # enable pyenv which allow you to switch between different python versions
@@ -76,6 +83,9 @@ fi
 set -o vi
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
+bindkey -v
+bindkey '^R' history-incremental-search-backward
 
 encrypt() {
     openssl enc -aes-256-cbc -e -in $1 -out $2

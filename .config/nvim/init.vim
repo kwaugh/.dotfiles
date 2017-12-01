@@ -53,6 +53,11 @@ nmap <leader>w :w!<cr>
 nmap <leader>q :q<cr>
 nmap <leader>x :x<cr>
 
+" Latex compilation
+nmap <leader>ll :!pdflatex %<cr><cr>
+" Compile bibliography too with bibtex
+nmap <leader>lb :!pdflatex % && bibtex expand('%:e')<cr><cr>
+
 " Fuzzy file finding
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 " omni completion
@@ -88,6 +93,7 @@ set incsearch       " search as characters are entered
 set hlsearch        " highlights search matches
 set ignorecase      " ignore case when searching
 set smartcase       " smart case searching
+set cursorline
 nmap <leader>c :nohlsearch<CR>
 
 " Allow for mouse click to move cursor

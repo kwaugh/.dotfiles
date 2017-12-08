@@ -44,6 +44,9 @@ alias maverick='ssh kwaugh@maverick.tacc.utexas.edu'
 alias homeserver='ssh keivaun@70.114.241.139'
 alias apartmentserver='ssh kwaugh@70.114.210.103'
 alias apartmentservery='ssh -Y kwaugh@70.114.210.103'
+alias apartmentserverlocal='ssh kwaugh@192.168.1.215'
+alias apartmentserverlocaly='ssh -Y kwaugh@192.168.1.215'
+
 alias digitalocean='ssh root@192.241.244.206'
 
 alias mountbaus='sudo sshfs -o allow_other,defer_permissions,IdentityFile=~/.ssh/id_rsa kwaugh@70.114.210.103:/media/kwaugh/RAID/ ~/RAID/'

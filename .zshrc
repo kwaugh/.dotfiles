@@ -32,6 +32,7 @@ PROMPT='%{$(pwd|grep --color=always /)%${#PWD}G%} %(!.%F{red}.%F{cyan})%n%f@%F{y
 export LANG=en_SG.utf8
 export ZSH=$HOME/.oh-my-zsh
 POWERLEVEL9K_MODE='awesome-fontconfig'
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator background_jobs command_execution_time)
 ZSH_THEME="powerlevel9k/powerlevel9k"
 plugins=(git)
 source $ZSH/oh-my-zsh.sh

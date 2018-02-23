@@ -71,6 +71,7 @@ set softtabstop=4 " number of spaces in tab when editing
 set expandtab " tabs are spaces
 set ruler
 set showcmd
+set guicursor=
 
 " ctrlp ignore stuff
 set wildignore+=*/tmp/*,*.zip,.svn,CVS,.git,*.o,*.a,*.class,*.mo,*.la,*.so,

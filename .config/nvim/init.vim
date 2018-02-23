@@ -54,9 +54,9 @@ nmap <leader>q :q<cr>
 nmap <leader>x :x<cr>
 
 " Latex compilation
-nmap <leader>ll :!pdflatex %<cr><cr>
+nmap <leader>ll :!pdflatex %<cr>
 " Compile bibliography too with bibtex
-nmap <leader>lb :!pdflatex % && bibtex expand('%:e')<cr><cr>
+nmap <leader>lb :!pdflatex % && bibtex expand('%:e')<cr>
 
 " Fuzzy file finding
 set runtimepath^=~/.vim/bundle/ctrlp.vim

@@ -62,6 +62,7 @@ alias apartmentserver='ssh kwaugh@70.114.210.103'
 alias apartmentservery='ssh -Y kwaugh@70.114.210.103'
 alias apartmentserverlocal='ssh kwaugh@192.168.1.215'
 alias apartmentserverlocaly='ssh -Y kwaugh@192.168.1.215'
+alias apartmentmonster='ssh -p 3000 kwaugh@70.114.210.103'
 
 alias digitalocean='ssh root@192.241.244.206'
 
@@ -76,6 +77,7 @@ if [[ $unamestr == 'Darwin' ]]; then
     alias ls='ls -G'
     alias ll='ls -G -l -a'
     export PATH="/Applications/MATLAB_R2016b.app/bin:$PATH"
+    export PATH="/opt/metasploit-framework/bin:$PATH"
     alias mountbaus='sudo sshfs -o allow_other,defer_permissions,IdentityFile=~/.ssh/id_rsa kwaugh@70.114.210.103:/media/kwaugh/RAID/ ~/RAID/'
     alias unmountbaus='sudo umount ~/RAID'
     export DROPBOX_LOC="~/Dropbox"

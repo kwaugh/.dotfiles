@@ -90,7 +90,7 @@ elif [[ $unamestr == 'Linux' ]]; then
     alias ls='ls --color'
     alias ll='ls -l --color -a'
     export PATH="/usr/local/MATLAB/R2017a/bin:$PATH"
-    export DROPBOX_LOC="/media/kwaugh/RAID/Dropbox"
+    export DROPBOX_LOC="/media/kwaugh/RAIDUbuntu/Dropbox"
     alias nvim='vim'
 fi
 

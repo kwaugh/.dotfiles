@@ -111,7 +111,7 @@ decrypt() {
 }
 
 dgrep() {
-    grep -rInH --exclude="*.{out,output}" --exclude-dir="node_modules" $1 $2
+    grep -rinH --exclude="*.{out,output}" --exclude-dir="node_modules" $1 $2
 }
 
 space() {

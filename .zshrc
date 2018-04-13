@@ -58,16 +58,18 @@ alias gilligany='ssh -Y kwaugh@gilligan.cs.utexas.edu'
 alias maverick='ssh kwaugh@maverick.tacc.utexas.edu'
 
 alias homeserver='ssh keivaun@70.114.241.139'
-alias apartmentserver='ssh kwaugh@70.114.210.103'
-alias apartmentservery='ssh -Y kwaugh@70.114.210.103'
-alias apartmentserverlocal='ssh kwaugh@192.168.1.215'
-alias apartmentserverlocaly='ssh -Y kwaugh@192.168.1.215'
-alias apartmentmonster='ssh -p 3000 kwaugh@70.114.210.103'
+alias baus='ssh kwaugh@70.114.210.103'
+alias bausy='ssh -Y kwaugh@70.114.210.103'
+alias bauslocal='ssh kwaugh@192.168.1.215'
+alias bauslocaly='ssh -Y kwaugh@192.168.1.215'
+alias monster='ssh -p 3000 kwaugh@70.114.210.103'
+alias monsterlocal='ssh kwaugh@192.168.1.200'
 
 alias digitalocean='ssh root@192.241.244.206'
 
 alias gitspa='git stash; git pull; git stash apply'
 alias sl='ls'
+alias l='ls -al'
 
 eval "$(thefuck --alias)"
 

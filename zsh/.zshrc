@@ -47,6 +47,8 @@ if [[ $unamestr == 'Darwin' ]]; then
 fi
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/Library/TeX/texbin:$PATH"
 
+export MSF_DATABASE_CONFIG=~/.msf4/database.yml
+
 unamestr=$(uname)
 
 alias plant='ssh kwaugh@planthopper.cs.utexas.edu'
@@ -73,13 +75,22 @@ alias gitspa='git stash; git pull; git stash apply'
 alias sl='ls'
 alias l='ls -al'
 
+alias cc1='ssh cc@129.114.109.127'
+alias cc2='ssh cc@129.114.109.126'
+alias cc3='ssh cc@129.114.109.165'
+alias client='ssh cc@129.114.109.159'
+alias skylake-client='ssh cc@129.114.109.222'
+alias skylake-cc1='ssh cc@129.114.109.218'
+alias skylake-cc2='ssh cc@129.114.109.240'
+alias skylake-cc3='ssh cc@129.114.109.219'
+
 eval "$(thefuck --alias)"
 
 if [[ $unamestr == 'Darwin' ]]; then
     alias vim='mvim -v'
     alias fixdigitalocean='sudo ifconfig en0 down;sudo route -n flush;sudo ifconfig en0 up'
     alias ls='ls -G'
-    alias ll='ls -G -l -a'
+    alias ll='ls -G -l -a -h -o'
     export PATH="/Applications/MATLAB_R2016b.app/bin:$PATH"
     export PATH="/opt/metasploit-framework/bin:$PATH"
     alias mountbaus='sudo sshfs -o allow_other,defer_permissions,IdentityFile=~/.ssh/id_rsa kwaugh@70.114.210.103:/media/kwaugh/RAID/ ~/RAID/'
@@ -92,7 +103,7 @@ if [[ $unamestr == 'Darwin' ]]; then
 elif [[ $unamestr == 'Linux' ]]; then
     alias open='xdg-open'
     alias ls='ls --color'
-    alias ll='ls -l --color -a'
+    alias ll='ls -l --color -a -h -o'
     export PATH="/usr/local/MATLAB/R2017a/bin:$PATH"
     export DROPBOX_LOC="/media/kwaugh/RAIDUbuntu/Dropbox"
 fi

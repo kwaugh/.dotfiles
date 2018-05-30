@@ -175,3 +175,6 @@ command -bar -nargs=0 -range=% TrimSpaces <line1>,<line2>call TrimSpaces()
 nmap <F12>     :ShowSpaces 1<CR>
 nmap <S-F12>   m`:TrimSpaces<CR>``
 nmap <S-F12>   :TrimSpaces<CR>
+
+let g:python3_host_prog = '/Users/keivaun/.pyenv/versions/neovim3/bin/python'
+let g:python_host_prog = '/Users/keivaun/.pyenv/versions/neovim2/bin/python'

@@ -30,15 +30,17 @@ PROMPT='%{$(pwd|grep --color=always /)%${#PWD}G%} %(!.%F{red}.%F{cyan})%n%f@%F{y
 
 # oh-my-zsh settings
 export LANG=en_SG.utf8
-export ZSH=$HOME/.oh-my-zsh
-POWERLEVEL9K_MODE='awesome-fontconfig'
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir rbenv vcs ssh)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator background_jobs command_execution_time)
-ZSH_THEME="powerlevel9k/powerlevel9k"
-plugins=(git)
-source $ZSH/oh-my-zsh.sh
+# export ZSH=$HOME/.oh-my-zsh
+# POWERLEVEL9K_MODE='awesome-fontconfig'
+# POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir rbenv vcs ssh)
+# POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator background_jobs command_execution_time)
+# ZSH_THEME="powerlevel9k/powerlevel9k"
+# plugins=(git)
+# source $ZSH/oh-my-zsh.sh
 
 export ERLHOME=/usr/local/lib/erlang
+
+export EDITOR=nvim
 
 if [[ $unamestr == 'Darwin' ]]; then
     export PATH="/Users/keivaunwaugh/Library/Haskell/bin:$PATH"
@@ -84,7 +86,7 @@ if [[ $unamestr == 'Darwin' ]]; then
     alias unmountbaus='sudo umount ~/RAID'
     export DROPBOX_LOC="~/Dropbox"
     test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
-    source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+    source ~/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 
 elif [[ $unamestr == 'Linux' ]]; then
@@ -119,3 +121,8 @@ dgrep() {
 space() {
     du -sk ~/* ~/.??* | sort -n
 }
+
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+
+alias dev='ssh devvm18416.prn1.facebook.com'

@@ -2,8 +2,8 @@ export TERM="xterm-256color"
 
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.histfile
-HISTSIZE=1000
-SAVEHIST=1000
+HISTSIZE=10000
+SAVEHIST=10000
 bindkey -v
 
 if [[ $unamestr == 'Darwin' ]]; then
@@ -30,13 +30,13 @@ PROMPT='%{$(pwd|grep --color=always /)%${#PWD}G%} %(!.%F{red}.%F{cyan})%n%f@%F{y
 
 # oh-my-zsh settings
 export LANG=en_SG.utf8
-# export ZSH=$HOME/.oh-my-zsh
-# POWERLEVEL9K_MODE='awesome-fontconfig'
-# POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir rbenv vcs ssh)
-# POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator background_jobs command_execution_time)
-# ZSH_THEME="powerlevel9k/powerlevel9k"
-# plugins=(git)
-# source $ZSH/oh-my-zsh.sh
+export ZSH=$HOME/.oh-my-zsh
+POWERLEVEL9K_MODE='awesome-fontconfig'
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir rbenv vcs ssh)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator background_jobs command_execution_time)
+ZSH_THEME="powerlevel9k/powerlevel9k"
+plugins=(git)
+source $ZSH/oh-my-zsh.sh
 
 export ERLHOME=/usr/local/lib/erlang
 
@@ -95,11 +95,10 @@ elif [[ $unamestr == 'Linux' ]]; then
     alias ll='ls -l --color -a'
     export PATH="/usr/local/MATLAB/R2017a/bin:$PATH"
     export DROPBOX_LOC="/media/kwaugh/RAIDUbuntu/Dropbox"
-    alias nvim='vim'
 fi
 
-alias fall="cd $DROPBOX_LOC/School/senior/fall"
-alias spring="cd $DROPBOX_LOC/School/senior/spring"
+alias fall="cd $DROPBOX_LOC/School/graduate/fall"
+alias spring="cd $DROPBOX_LOC/School/graduate/spring"
 
 set -o vi
 
@@ -121,8 +120,3 @@ dgrep() {
 space() {
     du -sk ~/* ~/.??* | sort -n
 }
-
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
-
-alias dev='ssh devvm18416.prn1.facebook.com'

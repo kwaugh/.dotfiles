@@ -62,12 +62,12 @@ alias gilligany='ssh -Y kwaugh@gilligan.cs.utexas.edu'
 alias maverick='ssh kwaugh@maverick.tacc.utexas.edu'
 
 alias homeserver='ssh keivaun@70.114.241.139'
-alias baus='ssh kwaugh@70.114.210.103'
-alias bausy='ssh -Y kwaugh@70.114.210.103'
-alias bauslocal='ssh kwaugh@192.168.1.215'
-alias bauslocaly='ssh -Y kwaugh@192.168.1.215'
-alias monster='ssh -p 3000 kwaugh@70.114.210.103'
-alias monsterlocal='ssh kwaugh@192.168.1.200'
+alias baus='ssh kwaugh@70.114.199.247'
+alias bausy='ssh -Y kwaugh@70.114.199.247'
+alias bauslocal='ssh kwaugh@192.168.1.105'
+alias bauslocaly='ssh -Y kwaugh@192.168.1.105'
+alias monster='ssh -p 3000 kwaugh@70.114.199.247'
+alias monsterlocal='ssh kwaugh@192.168.1.120'
 
 alias digitalocean='ssh root@192.241.244.206'
 

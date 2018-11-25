@@ -14,6 +14,7 @@ Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'wincent/terminus'
 " vim-git integration
 Plug 'tpope/vim-fugitive'
+Plug 'scrooloose/nerdtree'
 call plug#end()
 
 " Auto bracket plugin
@@ -21,6 +22,9 @@ filetype plugin indent on
 
 colorscheme badwolf
 syntax on
+
+" Toggle NerdTree with ctrl+n
+nmap <C-n> :NERDTreeToggle<CR>
 
 let g:ale_sign_column_always = 1
 let g:ale_sign_error = '>>'

@@ -32,7 +32,7 @@ PROMPT='%{$(pwd|grep --color=always /)%${#PWD}G%} %(!.%F{red}.%F{cyan})%n%f@%F{y
 export LANG=en_SG.utf8
 export ZSH=$HOME/.oh-my-zsh
 POWERLEVEL9K_MODE='awesome-fontconfig'
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir rbenv vcs ssh)
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir rbenv vcs ssh anaconda)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator background_jobs command_execution_time)
 ZSH_THEME="powerlevel9k/powerlevel9k"
 plugins=(git)
@@ -67,7 +67,7 @@ alias bausy='ssh -Y kwaugh@70.114.199.247'
 alias bauslocal='ssh kwaugh@192.168.1.105'
 alias bauslocaly='ssh -Y kwaugh@192.168.1.105'
 alias monster='ssh -p 3000 kwaugh@70.114.199.247'
-alias monsterlocal='ssh kwaugh@192.168.1.120'
+alias monsterlocal='ssh kwaugh@192.168.1.121'
 
 alias digitalocean='ssh root@192.241.244.206'
 
@@ -131,3 +131,21 @@ dgrep() {
 space() {
     du -sk ~/* ~/.??* | sort -n
 }
+#
+# added by Anaconda3 5.3.0 installer
+# >>> conda init >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$(CONDA_REPORT_ERRORS=false '/anaconda3/bin/conda' shell.bash hook 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    \eval "$__conda_setup"
+else
+    if [ -f "/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/anaconda3/etc/profile.d/conda.sh"
+        CONDA_CHANGEPS1=false conda activate base
+    else
+        \export PATH="/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda init <<<
+source deactivate

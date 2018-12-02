@@ -23,7 +23,13 @@ filetype plugin indent on
 colorscheme badwolf
 syntax on
 
-" Toggle NerdTree with ctrl+n
+if &term =~ '256color'
+    " Disable Background Color Erase (BCE) so that color schemes
+    " work properly when Vim is used inside tmux and GNU screen.
+    set t_ut=
+endif
+highlight Normal ctermfg=grey
+
 nmap <C-n> :NERDTreeToggle<CR>
 
 let g:ale_sign_column_always = 1
@@ -69,13 +75,16 @@ set omnifunc=syntaxcomplete#Complete
 " Tab Settings
 " Share clipboard with general OS clipboard
 set clipboard=unnamed
-set tabstop=8 " number of visual spaces a tab counts for
-set shiftwidth=4
+set textwidth=80
+set tabstop=4 " number of visual spaces a tab counts for
 set softtabstop=4 " number of spaces in tab when editing
+set shiftwidth=4
 set expandtab " tabs are spaces
 set ruler
 set showcmd
 set guicursor=
+
+set backspace=indent,eol,start
 
 " ctrlp ignore stuff
 set wildignore+=*/tmp/*,*.zip,.svn,CVS,.git,*.o,*.a,*.class,*.mo,*.la,*.so,
@@ -179,6 +188,3 @@ command -bar -nargs=0 -range=% TrimSpaces <line1>,<line2>call TrimSpaces()
 nmap <F12>     :ShowSpaces 1<CR>
 nmap <S-F12>   m`:TrimSpaces<CR>``
 nmap <S-F12>   :TrimSpaces<CR>
-
-let g:python3_host_prog = '/Users/keivaun/.pyenv/versions/neovim3/bin/python'
-let g:python_host_prog = '/Users/keivaun/.pyenv/versions/neovim2/bin/python'

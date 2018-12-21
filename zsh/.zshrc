@@ -7,8 +7,8 @@ SAVEHIST=10000
 bindkey -v
 
 if [[ $unamestr == 'Darwin' ]]; then
-    export DEFAULT_USER=keivaunwaugh
-    export HOME="/Users/keivaunwaugh"
+    export DEFAULT_USER=kwaugh
+    export HOME="/Users/kwaugh"
 elif [[ $unamestr == 'Linux' ]]; then
     export DEFAULT_USER=kwaugh
     export HOME="/home/kwaugh"
@@ -43,7 +43,7 @@ export ERLHOME=/usr/local/lib/erlang
 export EDITOR=nvim
 
 if [[ $unamestr == 'Darwin' ]]; then
-    export PATH="/Users/keivaunwaugh/Library/Haskell/bin:$PATH"
+    export PATH="/Users/kwaugh/Library/Haskell/bin:$PATH"
 fi
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/Library/TeX/texbin:$PATH"
 

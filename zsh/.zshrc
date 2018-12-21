@@ -85,7 +85,7 @@ if [[ $unamestr == 'Darwin' ]]; then
     alias unmountbaus='sudo umount ~/RAID'
     export DROPBOX_LOC="~/Dropbox"
     test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
-    source ~/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+    source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 
 elif [[ $unamestr == 'Linux' ]]; then

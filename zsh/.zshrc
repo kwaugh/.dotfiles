@@ -74,8 +74,6 @@ alias gitspa='git stash; git pull; git stash apply'
 alias sl='ls'
 alias l='ls -al'
 
-eval "$(thefuck --alias)"
-
 if [[ $unamestr == 'Darwin' ]]; then
     alias vim='mvim -v'
     alias fixdigitalocean='sudo ifconfig en0 down;sudo route -n flush;sudo ifconfig en0 up'

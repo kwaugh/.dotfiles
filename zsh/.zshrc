@@ -7,8 +7,8 @@ SAVEHIST=10000
 bindkey -v
 
 if [[ $unamestr == 'Darwin' ]]; then
-    export DEFAULT_USER=keivaunwaugh
-    export HOME="/Users/keivaunwaugh"
+    export DEFAULT_USER=kwaugh
+    export HOME="/Users/kwaugh"
 elif [[ $unamestr == 'Linux' ]]; then
     export DEFAULT_USER=kwaugh
     export HOME="/home/kwaugh"
@@ -43,7 +43,7 @@ export ERLHOME=/usr/local/lib/erlang
 export EDITOR=nvim
 
 if [[ $unamestr == 'Darwin' ]]; then
-    export PATH="/Users/keivaunwaugh/Library/Haskell/bin:$PATH"
+    export PATH="/Users/kwaugh/Library/Haskell/bin:$PATH"
 fi
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/Library/TeX/texbin:$PATH"
 
@@ -74,8 +74,6 @@ alias gitspa='git stash; git pull; git stash apply'
 alias sl='ls'
 alias l='ls -al'
 
-eval "$(thefuck --alias)"
-
 if [[ $unamestr == 'Darwin' ]]; then
     alias vim='mvim -v'
     alias fixdigitalocean='sudo ifconfig en0 down;sudo route -n flush;sudo ifconfig en0 up'
@@ -87,7 +85,7 @@ if [[ $unamestr == 'Darwin' ]]; then
     alias unmountbaus='sudo umount ~/RAID'
     export DROPBOX_LOC="~/Dropbox"
     test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
-    source ~/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+    source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 
 elif [[ $unamestr == 'Linux' ]]; then

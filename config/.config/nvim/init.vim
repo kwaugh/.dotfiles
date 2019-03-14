@@ -64,7 +64,7 @@ nmap <leader>q :q<cr>
 nmap <leader>x :x<cr>
 
 " Latex compilation
-nmap <leader>ll :!pdflatex %<cr>
+nmap <leader>ll :w! \| :!pdflatex %<cr>
 " Compile bibliography too with bibtex
 nmap <leader>lb :!pdflatex % && bibtex expand('%:e')<cr>
 
@@ -109,6 +109,7 @@ set ignorecase      " ignore case when searching
 set smartcase       " smart case searching
 set cursorline
 nmap <leader>c :nohlsearch<CR>
+set foldmethod=syntax
 
 " Allow for mouse click to move cursor
 set mouse=a
@@ -135,8 +136,6 @@ nmap <leader>s :mksession!<CR>
 " tab expansion
 nmap <leader>a :tab all<CR>
 
-" colorcolumn set to 73 so that 13in macbook pro can do two vim screens
-" side by side with my font settings in iterm2
 if exists('+colorcolumn')
     set colorcolumn=80
   else

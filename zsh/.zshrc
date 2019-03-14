@@ -119,6 +119,14 @@ dgrep() {
 space() {
     du -sk ~/* ~/.??* | sort -n
 }
+
+printfile() {
+    file=$1
+    username="kwaugh"
+    host="planthopper.cs.utexas.edu"
+    scp $file "$username@$host:"
+    ssh "$username@$host"
+}
 #
 # added by Anaconda3 installer
 export PATH="/home/kwaugh/anaconda3/bin:$PATH"
@@ -133,7 +141,7 @@ else
         . "/anaconda3/etc/profile.d/conda.sh"
         CONDA_CHANGEPS1=false conda activate base
     else
-        \export PATH="/anaconda3/bin:$PATH"
+        \export PATH="/Users/kwaugh/anaconda3/bin:$PATH"
     fi
 fi
 unset __conda_setup

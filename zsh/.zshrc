@@ -31,7 +31,7 @@ PROMPT='%{$(pwd|grep --color=always /)%${#PWD}G%} %(!.%F{red}.%F{cyan})%n%f@%F{y
 # oh-my-zsh settings
 export LANG=en_SG.utf8
 export ZSH=$HOME/.oh-my-zsh
-POWERLEVEL9K_MODE='awesome-fontconfig'
+# POWERLEVEL9K_MODE='awesome-fontconfig'
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir rbenv vcs ssh anaconda)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator background_jobs command_execution_time)
 ZSH_THEME="powerlevel9k/powerlevel9k"
@@ -93,7 +93,8 @@ elif [[ $unamestr == 'Linux' ]]; then
     alias ls='ls --color'
     alias ll='ls -l --color -a'
     export PATH="/usr/local/MATLAB/R2017a/bin:$PATH"
-    export DROPBOX_LOC="/media/kwaugh/RAIDUbuntu/Dropbox"
+    export DROPBOX_LOC="/mnt/RAIDUbuntu/Dropbox"
+    source ~/.fonts/*.sh
 fi
 
 alias fall="cd $DROPBOX_LOC/School/graduate/fall"

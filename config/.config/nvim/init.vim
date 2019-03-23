@@ -15,6 +15,7 @@ Plug 'wincent/terminus'
 " vim-git integration
 Plug 'tpope/vim-fugitive'
 Plug 'scrooloose/nerdtree'
+Plug 'vimwiki/vimwiki'
 call plug#end()
 
 " Auto bracket plugin

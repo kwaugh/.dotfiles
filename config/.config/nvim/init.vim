@@ -64,7 +64,7 @@ nmap <leader>q :q<cr>
 nmap <leader>x :x<cr>
 
 " Latex compilation
-nmap <leader>ll :!pdflatex %<cr>
+nmap <leader>ll :w! \| :!pdflatex %<cr>
 " Compile bibliography too with bibtex
 nmap <leader>lb :!pdflatex % && bibtex expand('%:e')<cr>
 
@@ -74,7 +74,7 @@ set runtimepath^=~/.vim/bundle/ctrlp.vim
 set omnifunc=syntaxcomplete#Complete
 " Tab Settings
 " Share clipboard with general OS clipboard
-set clipboard=unnamed
+set clipboard=unnamedplus
 set textwidth=80
 set tabstop=4 " number of visual spaces a tab counts for
 set softtabstop=4 " number of spaces in tab when editing

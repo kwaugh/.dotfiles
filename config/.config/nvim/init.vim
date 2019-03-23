@@ -75,7 +75,7 @@ set runtimepath^=~/.vim/bundle/ctrlp.vim
 set omnifunc=syntaxcomplete#Complete
 " Tab Settings
 " Share clipboard with general OS clipboard
-set clipboard=unnamed
+set clipboard=unnamedplus
 set textwidth=80
 set tabstop=4 " number of visual spaces a tab counts for
 set softtabstop=4 " number of spaces in tab when editing

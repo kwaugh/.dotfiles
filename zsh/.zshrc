@@ -130,6 +130,14 @@ printfile() {
     scp $file "$username@$host:"
     ssh "$username@$host"
 }
+
+getpaper() {
+    file=$1
+    username="kwaugh"
+    host="planthopper.cs.utexas.edu"
+    ssh "$username@$host" "wget www.cs.utexas.edu/~rossbach/380L/papers/$file; exit"
+    scp "$username@$host:~/$file" .
+}
 #
 # added by Anaconda3 installer
 export PATH="/home/kwaugh/anaconda3/bin:$PATH"

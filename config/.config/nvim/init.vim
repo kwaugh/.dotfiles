@@ -61,6 +61,7 @@ let g:mapleader = ","
 
 " Fast saving
 nmap <leader>w :w!<cr>
+nmap <leader>f :w!<cr>
 nmap <leader>q :q<cr>
 nmap <leader>x :x<cr>
 

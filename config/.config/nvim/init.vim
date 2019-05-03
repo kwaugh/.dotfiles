@@ -16,6 +16,7 @@ Plug 'wincent/terminus'
 Plug 'tpope/vim-fugitive'
 Plug 'scrooloose/nerdtree'
 Plug 'vimwiki/vimwiki'
+Plug 'ericcurtin/CurtineIncSw.vim'
 call plug#end()
 
 " Auto bracket plugin
@@ -32,6 +33,7 @@ endif
 highlight Normal ctermfg=grey
 
 nmap <C-n> :NERDTreeToggle<CR>
+nmap <F9> :call CurtineIncSw()<CR>
 
 let g:ale_sign_column_always = 1
 let g:ale_sign_error = '>>'
@@ -48,7 +50,7 @@ inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
 
 " And use ctrl+] when the cursor is positioned in a symbol to quickly jump to
 " a definition or declaration.
-au FileType c,cpp nnoremap <buffer> <c-]> :YcmCompleter GoTo<CR>
+" au FileType c,cpp nnoremap <buffer> <c-]> :YcmCompleter GoTo<CR>
 
 " Set a new <leader> character
 let mapleader = ","
@@ -85,6 +87,7 @@ set expandtab " tabs are spaces
 set ruler
 set showcmd
 set guicursor=
+set nofoldenable
 
 set backspace=indent,eol,start
 

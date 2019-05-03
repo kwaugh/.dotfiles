@@ -97,6 +97,8 @@ elif [[ $unamestr == 'Linux' ]]; then
     export PATH="/usr/local/MATLAB/R2017a/bin:$PATH"
     export DROPBOX_LOC="/mnt/RAIDUbuntu/Dropbox"
     source ~/.fonts/*.sh
+    export LESSOPEN="| $(which source-highlight) %s"
+    export LESS=' -R '
 fi
 
 alias fall="cd $DROPBOX_LOC/School/graduate/fall"

@@ -5,6 +5,7 @@ Plug 'ctrlpvim/ctrlp.vim'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
+Plug 'tpope/vim-fugitive'
 " Plug 'vim-syntastic/syntastic'
 " Plug 'Valloric/YouCompleteMe'
 Plug 'vim-airline/vim-airline'
@@ -13,7 +14,6 @@ Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 " Nicer vim integration
 Plug 'wincent/terminus'
 " vim-git integration
-Plug 'tpope/vim-fugitive'
 Plug 'scrooloose/nerdtree'
 Plug 'vimwiki/vimwiki'
 Plug 'ericcurtin/CurtineIncSw.vim'
@@ -31,6 +31,8 @@ if &term =~ '256color'
     set t_ut=
 endif
 highlight Normal ctermfg=grey
+
+set nofoldenable
 
 nmap <C-n> :NERDTreeToggle<CR>
 nmap <F9> :call CurtineIncSw()<CR>

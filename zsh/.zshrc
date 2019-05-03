@@ -44,6 +44,8 @@ export EDITOR=nvim
 
 if [[ $unamestr == 'Darwin' ]]; then
     export PATH="/Users/kwaugh/Library/Haskell/bin:$PATH"
+    # MacPorts location
+    export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
 fi
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/Library/TeX/texbin:$PATH"
 
@@ -118,7 +120,7 @@ decrypt() {
 }
 
 dgrep() {
-    grep -rinH --exclude="*.{out,output}" --exclude-dir="node_modules" $1 $2
+    grep -rinH --exclude="*.{out,output,o}" --exclude="tags" --exclude-dir="node_modules" $1 $2
 }
 
 space() {
@@ -127,10 +129,22 @@ space() {
 
 printfile() {
     file=$1
+    printer=$2
     username="kwaugh"
     host="planthopper.cs.utexas.edu"
     scp $file "$username@$host:"
-    ssh "$username@$host"
+    ssh "$username@$host" "lpr -Plw$printer \"$file\"; rm \"$file\""
+}
+
+downloadfile() {
+    file=$1
+    destination=$2
+    file_prefix="http://www.cs.utexas.edu/~rossbach/380L/papers/"
+    username="kwaugh"
+    host="planthopper.cs.utexas.edu"
+    ssh "$username@$host" "wget $file_prefix$file"
+    scp "$username@$host:~/$file" $destination
+    ssh "$username@$host" "rm $file"
 }
 
 getpaper() {
@@ -159,3 +173,4 @@ else
 fi
 unset __conda_setup
 # <<< conda init <<<
+export PATH="/usr/local/opt/bison/bin:$PATH"

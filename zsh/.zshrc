@@ -29,7 +29,7 @@ setopt PROMPT_SUBST
 PROMPT='%{$(pwd|grep --color=always /)%${#PWD}G%} %(!.%F{red}.%F{cyan})%n%f@%F{yellow}%m%f%(!.%F{red}.)%#%f '
 
 # oh-my-zsh settings
-export LANG=en_SG.utf8
+export LANG=en_US.utf8
 export ZSH=$HOME/.oh-my-zsh
 # POWERLEVEL9K_MODE='awesome-fontconfig'
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir rbenv vcs ssh anaconda)

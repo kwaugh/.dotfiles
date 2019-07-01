@@ -6,6 +6,8 @@ HISTSIZE=10000
 SAVEHIST=10000
 bindkey -v
 
+export LC_ALL=en_US.UTF-8
+
 if [[ $unamestr == 'Darwin' ]]; then
     export DEFAULT_USER=kwaugh
     export HOME="/Users/kwaugh"

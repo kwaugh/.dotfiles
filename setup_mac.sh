@@ -1,6 +1,5 @@
 #! /bin/zsh
 
---------------------------------------------------------------------------------
 # MANUAL UI CHANGES
 # change touchpad settings:
     # tap to click
@@ -10,6 +9,7 @@
     # decrease key repeat delay
     # map caps lock to escape
     # don't adjust keyboard in low light
+    defaults write -g ApplePressAndHoldEnabled -bool false
 # mission control:
     # don't automatically rearrange Spaces based on most recent use
 # dock
@@ -29,15 +29,18 @@ chsh -s $(which zsh)
 # install Krypton
 curl https://krypt.co/kr | sh
 kr pair
-# prepare for dotfiles
-brew install stow
-cd ~
+
+# COMMAND LINE APPS
+brew install stow python2 python3 speedtest-cli macvim neovim
+
 # install dotfiles
+cd ~
 git clone git@github.com:kwaugh/.dotfiles.git
 cd .dotfiles
 stow config tmux vim ycm zsh
 cd ~
-# configure git
+
+# CONFIGURE GIT
 git config --global alias.st status
 git config --global alias.br branch
 git config --global alias.ci commit
@@ -46,16 +49,14 @@ git config --global user.name "Keivaun Waugh"
 git config --global user.email "git@keivaun.com"
 
 brew cask install iterm2
-# coding languages
-brew install python2 python3
-# text editors
-brew install macvim neovim
+
+# NEOVIM SETUP
 pip3 install neovim
 pip2 install neovim
 
-# casks
+# CASKS
 brew cask install lastpass alfred dropbox spectacle nightowl protonmail-bridge
-brew cask install signal appcleaner
+brew cask install signal appcleaner spotify dash
 
 # APPSTORE APPS
 # pages, numbers, keynote, xcode, any.do, caffeinated

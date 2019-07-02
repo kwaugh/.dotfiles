@@ -55,13 +55,16 @@ pip2 install neovim
 
 # casks
 brew cask install lastpass alfred dropbox spectacle nightowl protonmail-bridge
-brew cask install signal
+brew cask install signal appcleaner
 
 # APPSTORE APPS
 # pages, numbers, keynote, xcode, any.do, caffeinated
 
 # POWERLEVEL9K
 # configure according to: https://github.com/bhilburn/powerlevel9k/wiki/Install-Instructions#step-1-install-powerlevel9k
+brew tap sambadevi/powerlevel9k
+brew install powerlevel9k zsh-syntax-highlighting
+pip install --user powerline-status
 
 --------------------------------------------------------------------------------
 # NEOVIM COMMANDS

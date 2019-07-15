@@ -66,6 +66,10 @@ brew cask install signal appcleaner spotify dash
 brew tap sambadevi/powerlevel9k
 brew install powerlevel9k zsh-syntax-highlighting
 pip install --user powerline-status
+# Download/install powerline font. Set as iTerm2 font.
+# https://github.com/powerline/fonts/blob/master/Meslo%20Dotted/Meslo%20LG%20M%20DZ%20Regular%20for%20Powerline.ttf
+# iTerm2 Theme
+# https://raw.githubusercontent.com/mbadolato/iTerm2-Color-Schemes/master/schemes/3024%20Night.itermcolors
 
 --------------------------------------------------------------------------------
 # NEOVIM COMMANDS

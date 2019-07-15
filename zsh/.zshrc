@@ -9,8 +9,8 @@ bindkey -v
 export LC_ALL=en_US.UTF-8
 
 if [[ $unamestr == 'Darwin' ]]; then
-    export DEFAULT_USER=kwaugh
-    export HOME="/Users/kwaugh"
+    export DEFAULT_USER=keivaun
+    export HOME="/Users/keivaun"
 elif [[ $unamestr == 'Linux' ]]; then
     export DEFAULT_USER=kwaugh
     export HOME="/home/kwaugh"
@@ -72,8 +72,8 @@ alias bauslocal='ssh kwaugh@192.168.1.105'
 alias bauslocaly='ssh -Y kwaugh@192.168.1.105'
 alias monster='ssh -p 3000 kwaugh@70.114.199.247'
 alias monsterlocal='ssh kwaugh@192.168.1.121'
-alias raspberry='ssh -p 5000 kwaugh@70.114.199.247'
-alias raspberrylocal='ssh kwaugh@192.168.1.145'
+alias raspberry='ssh kwaugh@70.114.236.177'
+alias raspberrylocal='ssh kwaugh@192.168.0.24'
 
 alias digitalocean='ssh root@192.241.244.206'
 

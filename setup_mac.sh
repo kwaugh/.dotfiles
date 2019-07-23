@@ -22,6 +22,8 @@
     # show battery percentage in statusbar
 # login items
     # which applications start at boot
+# displays
+    # do not auto adjust brightness
 
 chsh -s $(which zsh)
 # install homebrew
@@ -29,6 +31,10 @@ chsh -s $(which zsh)
 # install Krypton
 curl https://krypt.co/kr | sh
 kr pair
+
+sleeptime=20
+echo "Sleeping for $sleeptime seconds to allow for pairing"
+sleep $sleeptime
 
 # COMMAND LINE APPS
 brew install stow python2 python3 speedtest-cli macvim neovim
@@ -48,15 +54,13 @@ git config --global alias.co checkout
 git config --global user.name "Keivaun Waugh"
 git config --global user.email "git@keivaun.com"
 
-brew cask install iterm2
-
 # NEOVIM SETUP
 pip3 install neovim
 pip2 install neovim
 
 # CASKS
 brew cask install lastpass alfred dropbox spectacle nightowl protonmail-bridge
-brew cask install signal appcleaner spotify dash
+brew cask install signal appcleaner spotify dash iterm2 firefox
 
 # APPSTORE APPS
 # pages, numbers, keynote, xcode, any.do, caffeinated

@@ -28,16 +28,15 @@
 chsh -s $(which zsh)
 # install homebrew
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-# install Krypton
-curl https://krypt.co/kr | sh
-kr pair
 
+# COMMAND LINE APPS
+brew install kryptco/tap/kr stow python2 python3 speedtest-cli macvim neovim
+
+# pair krypton
+kr pair
 sleeptime=20
 echo "Sleeping for $sleeptime seconds to allow for pairing"
 sleep $sleeptime
-
-# COMMAND LINE APPS
-brew install stow python2 python3 speedtest-cli macvim neovim
 
 # install dotfiles
 cd ~

@@ -32,7 +32,7 @@ chsh -s $(which zsh)
 brew tap sambadevi/powerlevel9k
 # COMMAND LINE APPS
 brew install kryptco/tap/kr stow python2 python3 speedtest-cli macvim neovim \
-    fzf powerlevel9k zsh-syntax-highlighting
+    fzf ripgrep powerlevel9k zsh-syntax-highlighting
 
 # pair krypton
 kr pair

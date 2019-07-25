@@ -2,6 +2,10 @@
 call plug#begin('~/.config/nvim/plugged')
 Plug 'jiangmiao/auto-pairs'
 Plug 'ctrlpvim/ctrlp.vim'
+" fzf
+Plug '/usr/local/opt/fzf'
+Plug 'junegunn/fzf.vim'
+
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
@@ -11,11 +15,13 @@ Plug 'tpope/vim-fugitive'
 Plug 'vim-airline/vim-airline'
 Plug 'w0rp/ale'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-" Nicer vim integration
+" Nicer vim integration. Auto sets paste mode, adds mouse support, changes
+" cursor shape when going in and out of input mode
 Plug 'wincent/terminus'
 " vim-git integration
 Plug 'scrooloose/nerdtree'
 Plug 'vimwiki/vimwiki'
+" switch between .c and .h files
 Plug 'ericcurtin/CurtineIncSw.vim'
 call plug#end()
 
@@ -36,6 +42,8 @@ set nofoldenable
 
 nmap <C-n> :NERDTreeToggle<CR>
 nmap <F9> :call CurtineIncSw()<CR>
+nmap <C-g> :Rg<Cr>
+nmap <C-f> :Files<Cr>
 
 let g:ale_sign_column_always = 1
 let g:ale_sign_error = '>>'

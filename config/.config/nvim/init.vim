@@ -1,7 +1,6 @@
 " Load vim-plug plugins
 call plug#begin('~/.config/nvim/plugged')
 Plug 'jiangmiao/auto-pairs'
-Plug 'ctrlpvim/ctrlp.vim'
 " fzf
 Plug '/usr/local/opt/fzf'
 Plug 'junegunn/fzf.vim'
@@ -43,7 +42,7 @@ set nofoldenable
 nmap <C-n> :NERDTreeToggle<CR>
 nmap <F9> :call CurtineIncSw()<CR>
 nmap <C-g> :Rg<Cr>
-nmap <C-f> :Files<Cr>
+nmap <C-p> :Files<Cr>
 
 let g:ale_sign_column_always = 1
 let g:ale_sign_error = '>>'
@@ -82,8 +81,6 @@ nmap <leader>ll :w! \| :!pdflatex %<cr>
 " Compile bibliography too with bibtex
 nmap <leader>lb :!pdflatex % && bibtex expand('%:e')<cr>
 
-" Fuzzy file finding
-set runtimepath^=~/.vim/bundle/ctrlp.vim
 " omni completion
 set omnifunc=syntaxcomplete#Complete
 " Tab Settings

@@ -83,6 +83,9 @@ set -o vi
 
 # Use fzf reverse search if it's installed
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+[ -f /usr/share/doc/fzf/examples/key-bindings.zsh ] && \
+    source /usr/share/doc/fzf/examples/key-bindings.zsh
+
 
 encrypt() {
     openssl enc -aes-256-cbc -e -in $1 -out $2
